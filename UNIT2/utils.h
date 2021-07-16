@@ -92,12 +92,12 @@ void printArray1D(int array[], size_t tam){
         
 }
 
-void swapGlobal(){
-        int temp = myVar1;
-        myVar1 = myVar2;
-        myVar2 = temp;
-        return;
-}
+//void swapGlobal(){
+//        int temp = myVar1;
+//        myVar1 = myVar2;
+//        myVar2 = temp;
+//        return;
+//}
 
 Array* returnArray( ){
         // int unArreglo[5] = {1,5,6,7,8};
@@ -108,3 +108,19 @@ Array* returnArray( ){
         unArrayType->dirArray[1] = 15;
         return unArrayType;
 }
+
+typedef struct robot{
+    char* name;
+    char* type;
+    int height;
+    int weight;
+    int DOF;
+    void(*greet) (struct robot);
+    
+}ROBOT; 
+
+
+void greet(ROBOT robot){
+    printf("Beep Boop, Hewwo %s ", robot.name);
+    printf("\n");
+};
